@@ -7,17 +7,27 @@ import React, {useState} from 'react';
 
 function Room() {
   const [isLit, setLit] = useState(false);
+  let [age, setAge] = useState(23)
     
-  function butt(){
-    console.log('On Click')
-    setLit(!isLit) 
-  }
-  
+
+
   return (
     <div>
         This is Room component: Lit = {isLit? 'lit':'dark'}
         <br/>
-        <button onClick = {butt}>Toggle Light</button>
+        Age: {age}
+        <br/>
+        <button onClick = {() => {console.log('Button Clicked');
+                                  setLit(!isLit); 
+                                  }}>
+          Toggle Light</button>
+        <br/>
+        
+        <button onClick = {() =>{
+                                  console.log('Increase Age Button Clicked')
+                                  setAge(++age)
+                                }}>
+          Add Age</button>
     </div>
   );
 }
