@@ -17,9 +17,7 @@ function Room() {
         <br/>
         Age: {age}
         <br/>
-        <button onClick = {() => {console.log('Button Clicked');
-                                  setLit(!isLit); 
-                                  }}>
+        <button onClick = {() =>setLit(!isLit) } >
           Toggle Light</button>
         <br/>
         
