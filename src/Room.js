@@ -17,11 +17,11 @@ function Room() {
         <br/>
         Age: {age}
         <br/>
-        <button onClick = {() =>setLit(!isLit) } >
+        <button style ={{color: 'red'}} onClick = {() =>setLit(!isLit) } >
           Toggle Light</button>
         <br/>
         
-        <button onClick = {() =>{
+        <button style ={{color: 'blue'}} onClick = {() =>{
                                   console.log('Increase Age Button Clicked')
                                   setAge(++age)
                                 }}>
