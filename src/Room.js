@@ -1,6 +1,7 @@
 //import logo from './logo.svg';
 import './App.css';
 import React, {useState} from 'react';
+import './Room.css'
 
 
 
@@ -10,18 +11,18 @@ function Room() {
   let [age, setAge] = useState(23)
     
 
-
+//BACKTICK is enclosing `room` in classname
   return (
-    <div>
-        This is Room component: Lit = {isLit? 'lit':'dark'}
+    <div className ={`room ${isLit? "lit":"dark"}`}>  
+        This is Room component: {isLit? 'lit':'dark'}
         <br/>
         Age: {age}
         <br/>
-        <button style ={{color: 'red'}} onClick = {() =>setLit(!isLit) } >
+        <button onClick = {() =>setLit(!isLit) } >
           Toggle Light</button>
         <br/>
         
-        <button style ={{color: 'blue'}} onClick = {() =>{
+        <button  onClick = {() =>{
                                   console.log('Increase Age Button Clicked')
                                   setAge(++age)
                                 }}>
