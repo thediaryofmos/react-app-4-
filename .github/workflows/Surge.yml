@@ -24,4 +24,4 @@ jobs:
         run: npm install -g surge
         
       - name: Run surge
-        run: surge ./build osmesreactapp.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build osmesreact.surge.sh --token ${{ secrets.SURGE_TOKEN }}
